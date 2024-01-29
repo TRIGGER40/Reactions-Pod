@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Pod</title>
+  <style>
+    .emoji {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="emojiPod">
+    <!-- Add your emojis here -->
+    <img src="emoji1.png" alt="Emoji 1" class="emoji" onclick="flyIn(this)">
+    <img src="emoji2.png" alt="Emoji 2" class="emoji" onclick="flyIn(this)">
+    <img src="emoji3.png" alt="Emoji 3" class="emoji" onclick="flyIn(this)">
+    <img src="emoji4.png" alt="Emoji 4" class="emoji" onclick="flyIn(this)">
+  </div>
+
+  <script>
+    function flyIn(emoji) {
+      emoji.style.transform = 'translateY(-300px)';
+      
+      // Reset the emoji position after a delay (you can adjust the delay as needed)
+      setTimeout(() => {
+        emoji.style.transform = 'translateY(0)';
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
